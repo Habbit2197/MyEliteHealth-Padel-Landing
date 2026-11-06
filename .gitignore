@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+scrape/
+scrape.zip
+qa/
+.DS_Store

@@ -1,0 +1,472 @@
+---
+import Base from '../layouts/Base.astro';
+import Phone from '../components/Phone.astro';
+import Icon from '../components/Icon.astro';
+import { SITE, PRICES } from '../config';
+
+const download = SITE.appStoreURL || '#descargar';
+const year = new Date().getFullYear();
+---
+<Base
+  title="MyEliteHealth · Tu pádel, medido desde la muñeca"
+  description="Marcador en el Apple Watch, golpes, momentum, lado de la pista y torneos Americano. Pádel, golf, baloncesto, racing y bienestar en una sola app para iPhone y Apple Watch."
+>
+  <!-- ═════════════ Navegación ═════════════ -->
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="MyEliteHealth, inicio">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFA24D"/><stop offset="1" stop-color="#E1621A"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#lg)"/><path d="M14 36h9l5-12 8 22 5-10h9" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        MyEliteHealth
+      </a>
+      <ul class="nav-links">
+        <li><a href="#padel">Pádel</a></li>
+        <li><a href="#deportes">Deportes</a></li>
+        <li><a href="#bienestar">Bienestar</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#clubes">Clubes</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+      <a class="btn btn-primary btn-sm" href={download}>Descargar</a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ═════════════ Hero ═════════════ -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow" data-reveal>iPhone + Apple Watch</span>
+          <h1 data-reveal data-delay="80">Tu pádel,<br /><span class="grad">medido desde<br />la muñeca</span></h1>
+          <p class="lead" data-reveal data-delay="160">
+            Lleva el marcador en el Apple Watch y descubre dónde ganas y dónde pierdes los puntos:
+            tus golpes, los momentos decisivos, con quién juegas mejor y desde qué lado de la pista.
+            Además de golf, baloncesto, racing y tu bienestar diario.
+          </p>
+          <div class="hero-cta" data-reveal data-delay="240">
+            <a class="btn btn-primary" href={download}>Descargar en la App Store</a>
+            <a class="btn btn-ghost" href="#padel">Ver qué hace en pádel</a>
+          </div>
+          <div class="hero-tags" data-reveal data-delay="320">
+            <span class="tag">Marcador en el reloj</span>
+            <span class="tag">Golpes y momentum</span>
+            <span class="tag">Americano y Mexicano</span>
+            <span class="tag">Sin cuentas ni servidores</span>
+          </div>
+        </div>
+        <div class="hero-stage" aria-hidden="true">
+          <Phone src="/img/padel-resumen.webp" alt="" class="p1" reveal="left" delay="200" eager />
+          <Phone src="/img/padel-momentum.webp" alt="" class="p2" reveal="right" delay="320" eager />
+          <div class="watch" data-watch data-reveal="zoom" data-delay="500">
+            <div class="face">
+              <div class="top"><span>PÁDEL</span><span>19:42</span></div>
+              <div class="score">
+                <div><b data-me>15</b><span>TÚ + ANA</span></div>
+                <div><b data-them>30</b><span>RIVALES</span></div>
+              </div>
+              <div class="games" data-games>SET 2 · 4-3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Cifras ═════════════ -->
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat" data-reveal><b data-count="4">0</b><span>deportes con su propio análisis</span></div>
+        <div class="stat" data-reveal data-delay="80"><b data-count="2">0</b><span>dispositivos sincronizados: reloj e iPhone</span></div>
+        <div class="stat" data-reveal data-delay="160"><b data-count="0">0</b><span>servidores: tus datos se quedan en tu iPhone</span></div>
+        <div class="stat" data-reveal data-delay="240"><b>1</b><span>pago, para siempre. Sin suscripción</span></div>
+      </div>
+    </div>
+
+    <!-- ═════════════ Qué es ═════════════ -->
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <span class="eyebrow" data-reveal>Qué es MyEliteHealth</span>
+          <h2 data-reveal>Lo que mide tu reloj, convertido en algo que puedes usar</h2>
+          <p class="lead" data-reveal>
+            El Apple Watch ya registra muchísimo: pulsaciones, movimiento, sueño, variabilidad cardiaca.
+            MyEliteHealth lo ordena por deporte y te lo enseña en el momento en que te sirve:
+            antes de jugar, durante el partido y al terminar.
+          </p>
+          <ul class="checks" data-reveal>
+            <li><div><b>Pensada para jugar, no solo para medir</b><span>El marcador va en la muñeca; el análisis llega solo al acabar.</span></div></li>
+            <li><div><b>Nada inventado</b><span>Si un dato no se ha medido, la app lo dice en vez de rellenarlo con una media.</span></div></li>
+            <li><div><b>Tus datos son tuyos</b><span>Sin cuentas, sin servidores propios y sin publicidad. Se exportan cuando quieras.</span></div></li>
+          </ul>
+        </div>
+        <div class="phones-row">
+          <Phone src="/img/padel-hub.webp" alt="Pantalla de pádel con nuevo partido, panel y ¿listo para jugar?" size="sm" reveal="up" float={0.05} />
+          <Phone src="/img/padel-dashboard.webp" alt="Panel de pádel con partidos por semana y momentos decisivos" size="sm" reveal="up" delay="120" float={0.1} />
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="hl">Pádel</span><span>Golf</span><span>Baloncesto</span><span>Racing</span><span>Bienestar</span><span>Movilidad</span><span class="hl">Americano</span><span>Mexicano</span>
+        <span class="hl">Pádel</span><span>Golf</span><span>Baloncesto</span><span>Racing</span><span>Bienestar</span><span>Movilidad</span><span class="hl">Americano</span><span>Mexicano</span>
+      </div>
+    </div>
+
+    <!-- ═════════════ Pádel: portada ═════════════ -->
+    <section class="section padel-hero" id="padel">
+      <svg class="court-lines" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+        <rect x="40" y="40" width="920" height="520" fill="none" stroke="#fff" stroke-width="4"/>
+        <line x1="500" y1="40" x2="500" y2="560" stroke="#fff" stroke-width="6"/>
+        <line x1="270" y1="40" x2="270" y2="560" stroke="#fff" stroke-width="3"/>
+        <line x1="730" y1="40" x2="730" y2="560" stroke="#fff" stroke-width="3"/>
+        <line x1="40" y1="300" x2="270" y2="300" stroke="#fff" stroke-width="3"/>
+        <line x1="730" y1="300" x2="960" y2="300" stroke="#fff" stroke-width="3"/>
+      </svg>
+      <div class="wrap split">
+        <div>
+          <span class="eyebrow" data-reveal>El deporte estrella</span>
+          <h2 data-reveal>Pádel</h2>
+          <p class="lead" data-reveal>
+            Un partido de pádel son cuatro jugadores, dos lados de la pista y cientos de puntos.
+            MyEliteHealth lo sigue entero desde tu muñeca y, al acabar, te dice qué ha pasado de verdad.
+          </p>
+          <div class="hero-cta mt" data-reveal>
+            <a class="btn btn-ghost" href="#padel-partido">Empezar por el partido</a>
+          </div>
+        </div>
+        <div class="phones-row">
+          <Phone src="/img/padel-intro.webp" alt="Presentación del módulo de pádel" reveal="zoom" float={0.06} />
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Pádel: capítulos ═════════════ -->
+    <section class="section" id="padel-partido">
+      <div class="wrap">
+
+        <!-- 01 · Durante el partido -->
+        <div class="chapter">
+          <div class="chapter-num" data-reveal>01</div>
+          <div>
+            <h3 data-reveal>Durante el partido: el marcador en la muñeca</h3>
+            <p class="lead" data-reveal>Un toque, un punto. Sin sacar el móvil del bolso.</p>
+            <div class="feature-grid">
+              <div class="feature" data-reveal>
+                <div class="ico"><Icon name="watch" /></div>
+                <h4>Marcador completo</h4>
+                <p>Punto de oro o ventaja, al mejor de 1, 3 o 5 sets, tie-break y deshacer. El iPhone lo refleja en directo y en la pantalla bloqueada.</p>
+              </div>
+              <div class="feature" data-reveal data-delay="80">
+                <div class="ico"><Icon name="ball" /></div>
+                <h4>Tus golpes, contados</h4>
+                <p>El reloj distingue tus derechas de tus reveses y los golpes altos de los bajos. Solo los tuyos: es tu muñeca la que se mueve.</p>
+              </div>
+              <div class="feature" data-reveal data-delay="160">
+                <div class="ico"><Icon name="heart" /></div>
+                <h4>Esfuerzo real</h4>
+                <p>Pulsaciones, calorías y cómo recuperas entre puntos, registradas como entreno de Apple Salud.</p>
+              </div>
+              <div class="feature" data-reveal>
+                <div class="ico"><Icon name="restart" /></div>
+                <h4>Nada se pierde</h4>
+                <p>Si la app del reloj se cierra a mitad, al abrirla ofrece «Reanudar partido» con el marcador exacto.</p>
+              </div>
+              <div class="feature" data-reveal data-delay="80">
+                <div class="ico"><Icon name="phone" /></div>
+                <h4>Reloj e iPhone, a la vez</h4>
+                <p>Se puede puntuar en cualquiera de los dos. Si alguna vez no coinciden, se ponen de acuerdo solos y el partido se guarda una sola vez.</p>
+              </div>
+              <div class="feature" data-reveal data-delay="160">
+                <div class="ico"><Icon name="chart" /></div>
+                <h4>Partidos sin terminar</h4>
+                <p>Si os quedáis sin pista, se guarda lo jugado y no cuenta como derrota. El modo entreno también se guarda.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 · Lado de la pista -->
+        <div class="chapter">
+          <div class="chapter-num" data-reveal>02</div>
+          <div class="split">
+            <div>
+              <h3 data-reveal>Drive o revés: tu lado de la pista</h3>
+              <p class="lead" data-reveal>
+                En pádel cada jugador tiene su lado. Al empezar, el reloj te enseña media pista y eliges con un toque.
+                Si cambiáis entre sets, también se guarda.
+              </p>
+              <ul class="checks" data-reveal>
+                <li><div><b>Tu lado en el perfil</b><span>Junto a tu mano dominante, para que el reloj interprete bien tus golpes.</span></div></li>
+                <li><div><b>Drive frente a revés</b><span>Victorias, bolas de break y golpes jugando en cada lado, con tus propios partidos.</span></div></li>
+                <li><div><b>Con quién encajas</b><span>Con qué pareja juegas mejor según el lado de cada uno.</span></div></li>
+              </ul>
+              <p class="lead" style="font-size:15px;margin-top:18px" data-reveal>El reloj no sabe en qué punto exacto de la pista estás: el lado lo indicas tú.</p>
+            </div>
+            <div data-reveal="zoom">
+              <div class="court" data-court>
+                <div class="net"></div>
+                <svg class="lines" viewBox="0 0 100 110" preserveAspectRatio="none" aria-hidden="true">
+                  <line x1="50" y1="40" x2="50" y2="110" stroke="#fff" stroke-width=".7"/>
+                  <line x1="0" y1="40" x2="100" y2="40" stroke="#fff" stroke-width=".7"/>
+                  <rect x=".5" y=".5" width="99" height="109" fill="none" stroke="#fff" stroke-width="1"/>
+                </svg>
+                <button class="left" data-side="reves">REVÉS<small>izquierda</small></button>
+                <button class="right" data-side="drive">DRIVE<small>derecha</small></button>
+                <div class="player"></div>
+              </div>
+              <p class="court-caption" data-court-caption aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 · Momentum y filtros -->
+        <div class="chapter">
+          <div class="chapter-num" data-reveal>03</div>
+          <div class="split">
+            <div>
+              <h3 data-reveal>El partido, punto a punto</h3>
+              <p class="lead" data-reveal>
+                La gráfica de momentum sube con tus puntos y baja con los suyos. Las bolas de break quedan marcadas,
+                y al tocar cualquier punto ves cómo iba el marcador y qué golpes diste.
+              </p>
+              <ul class="checks" data-reveal>
+                <li><div><b>Momentos decisivos</b><span>Bolas de break, de set y de partido: cuántas jugaste y cuántas ganaste.</span></div></li>
+                <li><div><b>Rachas</b><span>Tu mejor racha de puntos seguidos y la del rival.</span></div></li>
+                <li><div><b>Filtros</b><span>Solo los ganados, los perdidos, las bolas de break, los puntos con golpe alto tuyo o los largos.</span></div></li>
+              </ul>
+            </div>
+            <div>
+              <div class="momentum-card" data-reveal="zoom">
+                <svg viewBox="0 0 600 220" role="img" aria-label="Gráfica de momentum de ejemplo">
+                  <defs><linearGradient id="mgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7821F" stop-opacity=".28"/><stop offset="1" stop-color="#F7821F" stop-opacity="0"/></linearGradient></defs>
+                  <line class="zero" x1="0" y1="110" x2="600" y2="110"/>
+                  <path class="area" d=""/>
+                  <path class="path" d=""/>
+                  <g class="dots"></g>
+                </svg>
+                <div class="momentum-legend"><span><i style="background:var(--green)"></i>break ganada</span><span><i style="background:var(--red)"></i>break perdida</span><span>Partido de ejemplo</span></div>
+                <div class="chips" data-filters>
+                  <button class="chip" data-filter="todos">Todos<span class="chip-count"></span></button>
+                  <button class="chip" data-filter="ganados">Ganados<span class="chip-count"></span></button>
+                  <button class="chip" data-filter="perdidos">Perdidos<span class="chip-count"></span></button>
+                  <button class="chip" data-filter="break">Bolas de break<span class="chip-count"></span></button>
+                  <button class="chip" data-filter="altos">Golpe alto tuyo<span class="chip-count"></span></button>
+                  <button class="chip" data-filter="largos">Largos<span class="chip-count"></span></button>
+                </div>
+                <p style="margin-top:12px;font-weight:600" data-filter-result aria-live="polite"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 · Después del partido -->
+        <div class="chapter">
+          <div class="chapter-num" data-reveal>04</div>
+          <div>
+            <h3 data-reveal>Al acabar: tu resumen y tu evolución</h3>
+            <p class="lead" data-reveal>Cada partido suma. Con unas semanas, la app te enseña tu forma de jugar.</p>
+            <div class="phones-row mt">
+              <Phone src="/img/padel-partido.webp" alt="Detalle del partido: victoria, sets y resumen" size="sm" reveal="up" float={0.04} />
+              <Phone src="/img/padel-golpes.webp" alt="Tus golpes: derechas, altos y perfil de jugador" size="sm" reveal="up" delay="100" float={0.09} />
+              <Phone src="/img/padel-companeros.webp" alt="Con quién juegas mejor y contra quién juegas" size="sm" reveal="up" delay="200" float={0.05} />
+            </div>
+            <div class="feature-grid">
+              <div class="feature" data-reveal><div class="ico"><Icon name="trophy" /></div><h4>Resumen del partido</h4><p>Resultado set a set, duración, golpes, ritmo por tramos y comparación con tu media.</p></div>
+              <div class="feature" data-reveal data-delay="80"><div class="ico"><Icon name="users" /></div><h4>Parejas y rivales</h4><p>Con quién ganas más, contra quién te cuesta y cómo fue la última vez. Solo con tus partidos.</p></div>
+              <div class="feature" data-reveal data-delay="160"><div class="ico"><Icon name="chart" /></div><h4>Tu perfil de jugador</h4><p>Resistencia, decisión, regularidad y ritmo, calculados con tus golpes y tus puntos.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 · Compartir y torneos -->
+        <div class="chapter">
+          <div class="chapter-num" data-reveal>05</div>
+          <div>
+            <h3 data-reveal>Pensado para jugar en club</h3>
+            <div class="feature-grid">
+              <div class="feature" data-reveal><div class="ico"><Icon name="qr" /></div><h4>Comparte con los otros tres</h4><p>Un QR al terminar. Tu pareja lo guarda igual; los rivales, al revés. Sin cuentas: el partido viaja en el propio código.</p></div>
+              <div class="feature" data-reveal data-delay="80"><div class="ico"><Icon name="trophy" /></div><h4>Americano y Mexicano</h4><p>En el reloj, con 4 u 8 jugadores y a 16, 24 o 32 puntos. Cuadro justo, clasificación y quién juega con quién. No cuenta como victoria ni derrota.</p></div>
+              <div class="feature" data-reveal data-delay="160"><div class="ico"><Icon name="bolt" /></div><h4>¿Listo para jugar?</h4><p>Antes del partido: cómo has dormido, tu variabilidad cardiaca y tu carga de la semana, en un número y una frase.</p></div>
+              <div class="feature" data-reveal><div class="ico"><Icon name="move" /></div><h4>Activación antes de jugar</h4><p>Rutinas cortas de movilidad para hombro, cadera y tobillo: antes, después o en un día suelto.</p></div>
+              <div class="feature" data-reveal data-delay="80"><div class="ico"><Icon name="doc" /></div><h4>Marcador para otros</h4><p>¿Arbitras un partido? Llévalo en el reloj y envíaselo a los jugadores. No cuenta en tus estadísticas.</p></div>
+              <div class="feature" data-reveal data-delay="160"><div class="ico"><Icon name="lock" /></div><h4>Gratis, lo esencial</h4><p>El marcador en el reloj y el resultado de cada partido son gratis. El análisis completo, por {PRICES.sport} una vez.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recorrido de un partido -->
+        <div class="chapter">
+          <div class="chapter-num" data-reveal>06</div>
+          <div>
+            <h3 data-reveal>Un partido, de principio a fin</h3>
+            <div class="timeline">
+              <div class="step" data-reveal><div class="dot">1</div><div><h4>Antes de salir de casa</h4><p>«¿Listo para jugar?» te da una lectura de cómo llegas, con lo que tu reloj ha medido.</p></div></div>
+              <div class="step" data-reveal><div class="dot">2</div><div><h4>En la pista</h4><p>Abres pádel en el reloj, eliges tu lado tocando la media pista y empiezas. El iPhone se entera solo.</p></div></div>
+              <div class="step" data-reveal><div class="dot">3</div><div><h4>Durante el partido</h4><p>Un toque por punto. El reloj cuenta tus golpes y tus pulsaciones; entre sets puedes cambiar de lado.</p></div></div>
+              <div class="step" data-reveal><div class="dot">4</div><div><h4>Al terminar</h4><p>El partido se guarda una vez, con el resultado set a set, el momentum y tus golpes. Compartes el QR con los otros tres.</p></div></div>
+              <div class="step" data-reveal><div class="dot">5</div><div><h4>Durante la semana</h4><p>Tu evolución, con quién juegas mejor, drive frente a revés y cómo recuperas para el siguiente.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Otros deportes ═════════════ -->
+    <section class="section dark" id="deportes">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow" data-reveal>Y no solo pádel</span>
+          <h2 data-reveal>Un análisis para cada deporte</h2>
+          <p class="lead" data-reveal>Cada deporte tiene su ficha, su panel y su historial. Compras solo el tuyo o te llevas todos.</p>
+        </div>
+        <div class="sports">
+          <article class="sport golf" data-reveal>
+            <h3>Golf</h3>
+            <p>Tu swing y tu juego, ronda a ronda.</p>
+            <ul><li>Tempo del swing</li><li>Golpes, putts y greens por ronda</li><li>Esfuerzo y recuperación del recorrido</li></ul>
+            <Phone src="/img/golf.webp" alt="Ficha de golf" size="sm" />
+          </article>
+          <article class="sport basket" data-reveal data-delay="100">
+            <h3>Baloncesto</h3>
+            <p>Tu salto y tu carga, cuarto a cuarto.</p>
+            <ul><li>Curva del salto</li><li>Potencia y tramos sin saltos</li><li>¿Listo para jugar? antes del partido</li></ul>
+            <Phone src="/img/basket.webp" alt="Ficha de baloncesto" size="sm" />
+          </article>
+          <article class="sport racing" data-reveal data-delay="200">
+            <h3>Racing</h3>
+            <p>Cada etapa, guardada y comparada.</p>
+            <ul><li>Historial de etapas</li><li>Distancia, velocidades y vueltas</li><li>Consejos para hoy</li></ul>
+            <Phone src="/img/racing.webp" alt="Ficha de racing" size="sm" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Bienestar ═════════════ -->
+    <section class="section" id="bienestar">
+      <div class="wrap split rev">
+        <div>
+          <span class="eyebrow" data-reveal>Bienestar diario</span>
+          <h2 data-reveal>Cómo llegas a cada entreno</h2>
+          <p class="lead" data-reveal>Tu sueño, tu variabilidad cardiaca y tu carga, juntos, para decidir cuánto apretar hoy.</p>
+          <ul class="checks" data-reveal>
+            <li><div><b>Recuperación y carga</b><span>Tu carga de la semana comparada con tus semanas anteriores, y cuándo conviene bajar el ritmo.</span></div></li>
+            <li><div><b>Tu noche</b><span>Sueño y variabilidad cardiaca, leídos de Apple Salud, con tu propia referencia.</span></div></li>
+            <li><div><b>Movilidad y alineación</b><span>Rutinas guiadas y medición con la cámara del iPhone.</span></div></li>
+            <li><div><b>Informes</b><span>Tu semana en un documento y un PDF completo para guardar o compartir con tu entrenador.</span></div></li>
+          </ul>
+        </div>
+        <div class="phones-row">
+          <Phone src="/img/recuperacion.webp" alt="Recuperación y carga" size="sm" reveal="up" float={0.05} />
+          <Phone src="/img/movilidad.webp" alt="Rutinas de movilidad antes de jugar" size="sm" reveal="up" delay="120" float={0.1} />
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Privacidad ═════════════ -->
+    <section class="section dark">
+      <div class="wrap">
+        <span class="eyebrow" data-reveal>Privacidad</span>
+        <h2 data-reveal>Tus datos no salen de tu iPhone</h2>
+        <div class="privacy">
+          <div data-reveal><b style="color:#fff">Sin cuentas</b><span style="color:#A3ABBD">No hay registro ni contraseña. Abres la app y juegas.</span></div>
+          <div data-reveal data-delay="80"><b style="color:#fff">Sin servidores</b><span style="color:#A3ABBD">Tus partidos y tu perfil se guardan en tu iPhone y en tu reloj.</span></div>
+          <div data-reveal data-delay="160"><b style="color:#fff">Sin publicidad</b><span style="color:#A3ABBD">Ni anuncios ni analíticas de terceros.</span></div>
+          <div data-reveal data-delay="240"><b style="color:#fff">Exporta cuando quieras</b><span style="color:#A3ABBD">Todos tus datos, en un fichero, gratis.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Precios ═════════════ -->
+    <section class="section" id="precios">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow" data-reveal>Precios</span>
+          <h2 data-reveal>Un solo pago. Para siempre.</h2>
+          <p class="lead" data-reveal>Sin suscripción y sin sorpresas. En todos tus dispositivos con tu cuenta de Apple.</p>
+        </div>
+        <div class="plans">
+          <div class="plan" data-reveal>
+            <h3>Tu deporte</h3>
+            <div class="price">{PRICES.sport}<small>una vez</small></div>
+            <p class="note">Pádel, golf o baloncesto. El que juegues.</p>
+            <ul><li>Todo el análisis de ese deporte</li><li>Evolución, historial y métricas</li><li>Informe semanal</li></ul>
+          </div>
+          <div class="plan featured" data-reveal data-delay="100">
+            <span class="badge">Todo incluido</span>
+            <h3>Premium</h3>
+            <div class="price">{PRICES.premium}<small>una vez</small></div>
+            <p class="note">Todos los deportes y todos los módulos.</p>
+            <ul><li>Pádel, golf, baloncesto y racing</li><li>Recuperación, carga y bienestar</li><li>Movilidad, informes y PDF</li><li>Perfiles de entrenador</li></ul>
+          </div>
+          <div class="plan" data-reveal data-delay="200">
+            <h3>Mejora a Premium</h3>
+            <div class="price">{PRICES.upgrade}<small>una vez</small></div>
+            <p class="note">Si ya compraste un deporte, pasas a Premium pagando la diferencia.</p>
+            <ul><li>Lo mismo que Premium</li><li>Solo para quien ya tiene un deporte</li></ul>
+          </div>
+        </div>
+        <div class="free-strip" data-reveal>
+          <b>Gratis</b>
+          <span>El marcador en el reloj y el resultado de cada partido, tu puntuación del día, tu noche, tu actividad y exportar todos tus datos.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Clubes ═════════════ -->
+    <section class="section" id="clubes" style="padding-top:0">
+      <div class="wrap">
+        <div class="club-card" data-reveal="zoom">
+          <span class="eyebrow">Para clubes</span>
+          <h2 style="font-size:clamp(38px,5vw,64px);margin:14px 0 14px;position:relative;z-index:1">Lleva MyEliteHealth a tu club</h2>
+          <p class="lead" style="position:relative;z-index:1">Ofrecemos códigos para que los jugadores de tu club prueben todo durante 30 días, sin coste y sin renovaciones.</p>
+          <div class="club-grid">
+            <div><b>Códigos de 30 días</b><span>Cada jugador canjea el suyo cuando quiere desde la app. Al acabar, no se cobra nada.</span></div>
+            <div><b>Torneos sin papel</b><span>Americano y Mexicano en el reloj: el organizador deja de llevar la cuenta a mano.</span></div>
+            <div><b>Cada partido, cuatro jugadores</b><span>Basta con que uno lleve el reloj para que los cuatro tengan el partido por QR.</span></div>
+          </div>
+          <p style="margin-top:30px;position:relative;z-index:1"><a class="btn btn-primary" href={`mailto:${SITE.contactEmail}?subject=MyEliteHealth%20para%20mi%20club`}>Escríbenos</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ FAQ ═════════════ -->
+    <section class="section" id="faq" style="padding-top:0">
+      <div class="wrap">
+        <div class="center"><span class="eyebrow" data-reveal>Preguntas</span><h2 data-reveal>Lo que suele preguntarse</h2></div>
+        <div class="faq">
+          <details><summary>¿Qué necesito?</summary><p>Un iPhone y, para el marcador y los golpes, un Apple Watch con watchOS 26. Sin reloj puedes llevar el marcador en el iPhone.</p></details>
+          <details><summary>¿El reloj sabe dónde estoy en la pista?</summary><p>No. Mide tu muñeca: tus golpes, su altura y tu esfuerzo. El lado de la pista (drive o revés) lo eliges tú al empezar.</p></details>
+          <details><summary>¿Cuenta los golpes de los otros jugadores?</summary><p>No, solo los tuyos. Por eso, cuando ves «tu último golpe en el punto», no tiene por qué ser el golpe que terminó el punto.</p></details>
+          <details><summary>¿Es una suscripción?</summary><p>No. Pagas una vez y es tuyo para siempre, en todos tus dispositivos con tu cuenta de Apple. Puedes restaurar la compra cuando quieras.</p></details>
+          <details><summary>¿Tengo un código de mi club, cómo lo uso?</summary><p>En la app: Ajustes → Canjear código. Tendrás todo durante 30 días desde ese momento; al acabar no se cobra nada.</p></details>
+          <details><summary>¿Es una app médica?</summary><p>No. MyEliteHealth es una app de deporte y bienestar. No diagnostica ni trata ninguna condición y no sustituye la opinión de un profesional.</p></details>
+          <details><summary>¿Dónde están mis datos?</summary><p>En tu iPhone y en tu Apple Watch. No tenemos servidores con tus datos ni te pedimos crear una cuenta.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Descargar ═════════════ -->
+    <section class="section final" id="descargar">
+      <div class="wrap">
+        <span class="eyebrow" data-reveal>Empieza hoy</span>
+        <h2 data-reveal>Tu próximo partido,<br />medido</h2>
+        <p class="lead" data-reveal>Descarga MyEliteHealth para iPhone y Apple Watch. El marcador es gratis.</p>
+        <div data-reveal><a class="btn btn-primary" href={SITE.appStoreURL || '#'}>Descargar en la App Store</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div>© {year} {SITE.company} · CIF B75723957 · Madrid, España</div>
+      <nav>
+        <a href="/legal/aviso-legal/">Aviso legal</a>
+        <a href="/legal/privacidad/">Privacidad</a>
+        <a href="/legal/cookies/">Cookies</a>
+        <a href={`mailto:${SITE.contactEmail}`}>Contacto</a>
+      </nav>
+    </div>
+    <div class="wrap"><p class="legal-note">MyEliteHealth es una app de deporte y bienestar, no un producto sanitario. Apple, Apple Watch, iPhone y Apple Salud son marcas de Apple Inc.</p></div>
+  </footer>
+</Base>

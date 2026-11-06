@@ -1,0 +1,13 @@
+# Páginas de la web antigua que ya no existen (contenido retirado de la app).
+/medicos         /    301
+/medicos/        /    301
+/entrenadores    /    301
+/entrenadores/   /    301
+/alcance         /    301
+/alcance/        /    301
+/en              /    302
+/en/             /    302
+/en/doctors/     /    301
+/en/coaches/     /    301
+/en/scope/       /    301
+/en/legal/legal_notice/ /en/legal/legal-notice/ 301

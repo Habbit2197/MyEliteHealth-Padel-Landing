@@ -1,0 +1,11 @@
+---
+interface Props { src: string; alt: string; size?: 'sm' | 'md'; class?: string; float?: number; reveal?: string; delay?: number; eager?: boolean; }
+// Alto real de cada captura (todas miden 640 de ancho).
+const heights: Record<string, number> = { golf: 1112, basket: 1112, racing: 1112, recuperacion: 1112, herramientas: 1112, 'padel-intro': 1112, 'un-solo-pago': 1112, 'padel-hub': 1195, movilidad: 1195 };
+const { src, alt, size = 'md', class: cls = '', float, reveal, delay, eager = false } = Astro.props;
+const key = src.split('/').pop()!.replace('.webp', '');
+const h = heights[key] ?? 1202;
+---
+<div class:list={['phone', size === 'sm' && 'sm', cls]} data-float={float} data-reveal={reveal} data-delay={delay}>
+  <div class="screen"><img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" width="640" height={h} /></div>
+</div>

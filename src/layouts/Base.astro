@@ -1,0 +1,48 @@
+---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/barlow-condensed/600.css';
+import '@fontsource/barlow-condensed/700.css';
+import '@fontsource/barlow-condensed/800.css';
+import '../styles/global.css';
+interface Props { title: string; description: string; lang?: string; }
+const { title, description, lang = 'es' } = Astro.props;
+const ogImage = new URL('/img/og.jpg', Astro.site).toString();
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#0F121C" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).toString()} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'MyEliteHealth',
+    operatingSystem: 'iOS, watchOS',
+    applicationCategory: 'SportsApplication',
+    description,
+    publisher: { '@type': 'Organization', name: 'Amber Muscle S.L.' },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  })} />
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <slot />
+  <script>
+    import '../scripts/main.js';
+  </script>
+</body>
+</html>

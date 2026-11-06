@@ -1,0 +1,37 @@
+---
+import Base from './Base.astro';
+import { SITE } from '../config';
+interface Props { title: string; lang?: 'es' | 'en'; }
+const { title, lang = 'es' } = Astro.props;
+const es = lang === 'es';
+---
+<Base title={`${title} · MyEliteHealth`} description={title} lang={lang}>
+  <header class="nav nav-solid">
+    <div class="wrap">
+      <a class="brand" href="/">MyEliteHealth</a>
+      <a class="btn btn-ghost btn-sm" href="/">{es ? 'Volver a la web' : 'Back to the website'}</a>
+    </div>
+  </header>
+  <main class="legal">
+    <div class="wrap">
+      <h1>{title}</h1>
+      <slot />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div>© {new Date().getFullYear()} {SITE.company} · CIF B75723957 · Madrid, España</div>
+      <nav>
+        {es ? (
+          <>
+            <a href="/legal/aviso-legal/">Aviso legal</a><a href="/legal/privacidad/">Privacidad</a><a href="/legal/cookies/">Cookies</a><a href="/en/legal/privacy/">English</a>
+          </>
+        ) : (
+          <>
+            <a href="/en/legal/legal-notice/">Legal notice</a><a href="/en/legal/privacy/">Privacy</a><a href="/en/legal/cookies/">Cookies</a><a href="/legal/privacidad/">Español</a>
+          </>
+        )}
+      </nav>
+    </div>
+  </footer>
+</Base>
