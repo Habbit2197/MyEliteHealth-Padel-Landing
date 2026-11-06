@@ -339,3 +339,5 @@ p { margin: 0; }
 .sport-icon { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 18px 40px -14px rgba(0,0,0,.45); margin-bottom: 24px; }
 @media (max-width: 600px) { .sport-icon { width: 88px; height: 88px; border-radius: 20px; } }
 .sport-icon.sm { width: 64px; height: 64px; border-radius: 15px; margin-bottom: 16px; box-shadow: 0 10px 24px -10px rgba(0,0,0,.45); }
+.club-lead { position: relative; z-index: 1; color: #fff; font-size: clamp(20px, 2.4vw, 26px); font-weight: 600; line-height: 1.45; max-width: 46ch; }
+.club-grid span { color: #D9DEEA; }

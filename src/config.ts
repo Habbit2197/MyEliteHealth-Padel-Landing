@@ -13,5 +13,4 @@ export const SITE = {
 export const PRICES = {
   sport: '4,99 €',
   premium: '19,99 €',
-  upgrade: '14,99 €',
 };
