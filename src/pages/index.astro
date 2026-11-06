@@ -24,6 +24,7 @@ const year = new Date().getFullYear();
         <li><a href="#bienestar">Bienestar</a></li>
         <li><a href="#precios">Precios</a></li>
         <li><a href="#clubes">Clubes</a></li>
+        <li><a href="#equipo">Equipo</a></li>
         <li><a href="#faq">Preguntas</a></li>
       </ul>
       <a class="btn btn-primary btn-sm" href={download}>Descargar</a>
@@ -419,13 +420,81 @@ const year = new Date().getFullYear();
         <div class="club-card" data-reveal="zoom">
           <span class="eyebrow">Para clubes</span>
           <h2 style="font-size:clamp(38px,5vw,64px);margin:14px 0 14px;position:relative;z-index:1">Lleva MyEliteHealth a tu club</h2>
-          <p class="lead" style="position:relative;z-index:1">Ofrecemos códigos para que los jugadores de tu club prueben todo durante 30 días, sin coste y sin renovaciones.</p>
+          <p class="lead" style="position:relative;z-index:1">Trabajamos con clubes de pádel para que sus jugadores tengan cada partido medido, compartido y guardado. Cuéntanos cómo es tu club y lo preparamos juntos.</p>
           <div class="club-grid">
-            <div><b>Códigos de 30 días</b><span>Cada jugador canjea el suyo cuando quiere desde la app. Al acabar, no se cobra nada.</span></div>
+            <div><b>Acceso para tus jugadores</b><span>Preparamos un acceso especial para que los jugadores de tu club prueben la app completa.</span></div>
             <div><b>Torneos sin papel</b><span>Americano y Mexicano en el reloj: el organizador deja de llevar la cuenta a mano.</span></div>
             <div><b>Cada partido, cuatro jugadores</b><span>Basta con que uno lleve el reloj para que los cuatro tengan el partido por QR.</span></div>
           </div>
           <p style="margin-top:30px;position:relative;z-index:1"><a class="btn btn-primary" href={`mailto:${SITE.contactEmail}?subject=MyEliteHealth%20para%20mi%20club`}>Escríbenos</a></p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═════════════ Cómo funciona ═════════════ -->
+    <section class="section" id="como-funciona" style="padding-top:0">
+      <div class="wrap">
+        <div class="center"><span class="eyebrow" data-reveal>Cómo funciona</span><h2 data-reveal>De tu reloj a tu próximo partido</h2></div>
+        <div class="howto">
+          <div data-reveal><b>1</b><h4>Descarga y conecta</h4><p>Instala MyEliteHealth y da permiso a Apple Salud. Tu Apple Watch ya empieza a aportar datos.</p></div>
+          <div data-reveal data-delay="80"><b>2</b><h4>Aprende tu patrón</h4><p>Con las semanas, la app aprende tu propia referencia: te compara contigo, no con medias de población.</p></div>
+          <div data-reveal data-delay="160"><b>3</b><h4>Juega y mira</h4><p>El marcador va en la muñeca; el análisis del partido llega solo al terminar.</p></div>
+          <div data-reveal data-delay="240"><b>4</b><h4>Comparte</h4><p>Con tu pareja y tus rivales por QR, o con tu entrenador en un informe. Sin cuentas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Estudio CSD ═════════════ -->
+    <section class="section dark" id="estudio">
+      <div class="wrap split">
+        <div>
+          <span class="eyebrow" data-reveal>Investigación</span>
+          <h2 data-reveal>En validación con el Centro de Medicina del Deporte</h2>
+          <p class="lead" data-reveal>Consejo Superior de Deportes · Ministerio de Educación, Formación Profesional y Deportes</p>
+        </div>
+        <div class="study" data-reveal>
+          <p>La Subdirección General de Ciencias del Deporte ha manifestado su conformidad para el desarrollo del proyecto de investigación «Validación de la plataforma MyEliteHealth para la monitorización integral de deportistas mediante dispositivos de monitorización ambulatoria».</p>
+          <p>El estudio será realizado por la Unidad de Cardiología del Centro de Medicina del Deporte del CSD como centro investigador principal, bajo la dirección del Dr. Leonel Díaz González, con un diseño observacional en dos fases: entorno controlado de laboratorio y seguimiento en condiciones reales. Amber Muscle S.L. participa como entidad colaboradora tecnológica.</p>
+          <p><b>El estudio está pendiente de aprobación por un Comité de Ética de la Investigación (CEIm). Los resultados se publicarán cuando concluya.</b></p>
+          <p class="small">Conformidad firmada por José Ignacio Melendro Jurado, Subdirector General de Ciencias del Deporte · 27 de marzo de 2026 · CSV GEN-040b-f195-c0af-ba87-a340-be6c-4ac3-27ba</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Reseñas ═════════════ -->
+    <section class="section" id="resenas">
+      <div class="wrap">
+        <div class="center"><span class="eyebrow" data-reveal>App Store</span><h2 data-reveal>Lo que dicen en el App Store</h2><p class="lead" data-reveal>Reseñas publicadas por usuarios en el App Store de España.</p></div>
+        <div class="reviews">
+          <figure data-reveal><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><h4>Increíble</h4><blockquote>La mejor app que he tenido vinculada al deporte.</blockquote><figcaption>Javier9797 · 10 abr 2026 · España · v1.0.2</figcaption></figure>
+          <figure data-reveal data-delay="100"><div class="stars" aria-label="5 de 5 estrellas">★★★★★</div><h4>Excelencia</h4><blockquote>Maravillosa app reguladora, es una maravilla todo lo que te puede analizar y evitar.</blockquote><figcaption>klenxxo · 4 abr 2026 · España · v1.0</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ Equipo ═════════════ -->
+    <section class="section" id="equipo" style="padding-top:0">
+      <div class="wrap">
+        <div class="center"><span class="eyebrow" data-reveal>Equipo</span><h2 data-reveal>Quién hay detrás</h2></div>
+        <div class="team">
+          <div data-reveal><div class="avatar">JC</div><h4>Javier de La Cruz</h4><span class="role">CEO y Director de Desarrollo de Negocio</span><p>Socio fundador. Estrategia, producto y expansión internacional.</p></div>
+          <div data-reveal data-delay="100"><div class="avatar">CE</div><h4>Dr. Carlos Escobar Cervantes</h4><span class="role">CSO y Médico-Científico</span><p>Administrador único y cofundador de Amber Muscle S.L. Cardiólogo en el Hospital Universitario La Paz (Madrid).</p></div>
+          <div data-reveal data-delay="200"><div class="avatar">AS</div><h4>Alberto Saavedra</h4><span class="role">CTO · Tecnología y Producto</span><p>Arquitectura iOS y watchOS y cálculo en el propio dispositivo, para que tus datos no salgan de él.</p></div>
+        </div>
+        <p class="center small mt">Amber Muscle S.L. · CIF B75723957 · Madrid, España · Registro Mercantil de Madrid</p>
+      </div>
+    </section>
+
+    <!-- ═════════════ Novedades ═════════════ -->
+    <section class="section" id="novedades" style="padding-top:0">
+      <div class="wrap">
+        <div class="center"><span class="eyebrow" data-reveal>Novedades</span><h2 data-reveal>Cómo ha ido creciendo</h2></div>
+        <div class="changelog">
+          <article data-reveal><span class="ver">1.1.2</span><div><h4>Pádel para clubes y un pago por deporte</h4><p>Lado de la pista (drive o revés), momentum punto a punto, filtros de puntos, Americano y Mexicano en el reloj, compartir el partido por QR con pareja y rivales, y partidos que se recuperan si la app del reloj se cierra. Nuevo modelo de compra: tu deporte por {PRICES.sport} o todo con Premium. Y una regla nueva en toda la app: lo que no se mide se muestra como «—», nunca como un número.</p></div></article>
+          <article data-reveal><span class="ver">1.0.8</span><div><h4>Modos deportivos y privacidad más clara</h4><p>Pádel, golf y racing, cada uno con su marcador, su historial y su icono de app.</p></div></article>
+          <article data-reveal><span class="ver">1.0.7</span><div><h4>Marcador de pádel y tarjeta de golf</h4><p>Marcador de partido en vivo con tie-break, tarjeta hoyo a hoyo, historial de partidos y vueltas, y marcadores optimizados para VoiceOver.</p></div></article>
+          <article data-reveal><span class="ver">1.0.6</span><div><h4>Batería y sincronización</h4><p>Más de 15 fallos corregidos, menos consumo de batería y mejor sincronización con el Apple Watch.</p></div></article>
         </div>
       </div>
     </section>
@@ -439,7 +508,11 @@ const year = new Date().getFullYear();
           <details><summary>¿El reloj sabe dónde estoy en la pista?</summary><p>No. Mide tu muñeca: tus golpes, su altura y tu esfuerzo. El lado de la pista (drive o revés) lo eliges tú al empezar.</p></details>
           <details><summary>¿Cuenta los golpes de los otros jugadores?</summary><p>No, solo los tuyos. Por eso, cuando ves «tu último golpe en el punto», no tiene por qué ser el golpe que terminó el punto.</p></details>
           <details><summary>¿Es una suscripción?</summary><p>No. Pagas una vez y es tuyo para siempre, en todos tus dispositivos con tu cuenta de Apple. Puedes restaurar la compra cuando quieras.</p></details>
-          <details><summary>¿Tengo un código de mi club, cómo lo uso?</summary><p>En la app: Ajustes → Canjear código. Tendrás todo durante 30 días desde ese momento; al acabar no se cobra nada.</p></details>
+          <details><summary>Mi club me ha dado un código, ¿cómo lo uso?</summary><p>En la app: Ajustes → Canjear código. El acceso empieza en el momento del canje y no se renueva ni se cobra al terminar.</p></details>
+          <details><summary>¿En qué se diferencia de la app Salud del iPhone?</summary><p>MyEliteHealth funciona sobre Apple Salud, no en su lugar: lee lo que registra tu Apple Watch y lo ordena por deporte. Añade lo que Salud no tiene: marcador en el reloj, análisis de cada partido, comparación con tu propia referencia, informes para tu entrenador y perfiles de entrenador para seguir a varios deportistas.</p></details>
+          <details><summary>¿Qué servicios externos usa?</summary><p>Ninguno con tus datos de bienestar. Tres funciones opcionales consultan servicios externos solo cuando las usas: el tiempo y el calor envían tu ubicación aproximada a OpenWeather y Open-Meteo, y el escáner de alimentos consulta el código de barras en Open Food Facts. Puedes usar la app sin activar ninguna.</p></details>
+          <details><summary>¿Hay perfiles para entrenadores?</summary><p>Sí, con Premium. El entrenador recibe por QR lo que cada deportista decide compartir y ve su evolución, sin servidores ni cuentas.</p></details>
+          <details><summary>¿Está disponible en Android?</summary><p>No. MyEliteHealth es para iPhone y Apple Watch: necesita Apple Salud y los sensores del reloj.</p></details>
           <details><summary>¿Es una app médica?</summary><p>No. MyEliteHealth es una app de deporte y bienestar. No diagnostica ni trata ninguna condición y no sustituye la opinión de un profesional.</p></details>
           <details><summary>¿Dónde están mis datos?</summary><p>En tu iPhone y en tu Apple Watch. No tenemos servidores con tus datos ni te pedimos crear una cuenta.</p></details>
         </div>
@@ -465,6 +538,7 @@ const year = new Date().getFullYear();
         <a href="/legal/privacidad/">Privacidad</a>
         <a href="/legal/cookies/">Cookies</a>
         <a href={`mailto:${SITE.contactEmail}`}>Contacto</a>
+        <a href="https://wa.me/34600039385" rel="noopener">WhatsApp</a>
       </nav>
     </div>
     <div class="wrap"><p class="legal-note">MyEliteHealth es una app de deporte y bienestar, no un producto sanitario. Apple, Apple Watch, iPhone y Apple Salud son marcas de Apple Inc.</p></div>
